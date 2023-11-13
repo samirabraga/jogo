@@ -1,0 +1,32 @@
+import random
+opcao = ["pedra", "papel", "tesoura" ]
+escolha_usuario = str (input ("Escolha entre: pedra, papel, tesoura: "))
+print (escolha_usuario)
+escolha_computador = random.choice (opcao)
+print (escolha_computador)
+
+
+def jogar (a,b):
+    if a == "pedra" and b == "pedra":
+        return "Jogo empatado"
+    if a == "pedra" and b == "papel":
+        return "Você perdeu!"
+    if a == "pedra" and b == "tesoura":
+        return "Você ganhou!"
+
+    if a == "papel" and b == "papel":
+        return "Jogo empatado"
+    if a =="papel" and b =="pedra":
+        return "Você ganhou!"
+    if a == "papel" and b == "tesoura":
+        return "Você perdeu!"
+
+    if a == "tesoura" and b == "tesoura":
+        return "Jogo empatado"
+    if a == "tesoura" and b =="pedra":
+        return "Você perdeu!"
+    if a == "tesoura" and b =="papel":
+        return "Você ganhou!"
+
+
+print(jogar(escolha_usuario,escolha_computador))
